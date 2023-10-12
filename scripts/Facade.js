@@ -1,7 +1,8 @@
 // The Facade pattern is designed to provide a simplified interface to a complex subsystem
 
 // The Phone class represents a subsystem that we want to simplify with a facade
-class Phone {
+// NOTE: I've used the Phone1 class in case not to conflict with Phone class from other file
+class Phone1 {
     constructor(model) {
         this.model = model;
         this.batteryLevel = 100;
@@ -25,8 +26,8 @@ class Phone {
 // The PhoneFacade class provides a simplified interface to the complex subsystem
 class PhoneFacade {
     constructor() {
-        this.iPhone = new Phone('iPhone');
-        this.googlePixel = new Phone('Google Pixel');
+        this.iPhone = new Phone1('iPhone');
+        this.googlePixel = new Phone1('Google Pixel');
     }
 
     turnOnAllPhones() {

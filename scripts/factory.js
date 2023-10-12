@@ -1,5 +1,7 @@
 // The Factory pattern provides an interface for creating objects in a superclass, but allows subclasses to  
-//edit the type of objects that will be created.
+//edit the type of objects that will be created
+
+// NOTE: I've used the Phone3 class in case not to conflict with Phone class from other file
 
 // Abstract class PhoneFactory defines the method createPhone(), which should return an object of the Phone class
 class PhoneFactory {
@@ -12,29 +14,29 @@ class PhoneFactory {
 //different types of our products
 class AppleFactory extends PhoneFactory {
     createPhone(model) {
-        return new Phone(model, 1000);
+        return new Phone3(model, 1000);
     }
 }
 
 class GoogleFactory extends PhoneFactory {
     createPhone(model) {
-        return new Phone(model, 800);
+        return new Phone3(model, 800);
     }
 }
 
-// The Phone class represents the product to be created.
-class Phone {
+// The Phone class represents the product to be created
+class Phone3 {
     constructor(model, price) {
         this.model = model;
         this.price = price;
     }
 }
 
-// Create factories for each type of phone.
+// Create factories for each type of phone
 const appleFactory = new AppleFactory();
 const googleFactory = new GoogleFactory();
 
-// Create phones using the factories.
+// Create phones using the factories
 const phones = [];
 phones.push(appleFactory.createPhone('Apple iPhone'));
 phones.push(googleFactory.createPhone('Google Pixel'));

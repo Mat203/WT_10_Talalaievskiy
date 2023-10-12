@@ -8,12 +8,12 @@ class Singleton {
         if (Singleton.instance) {
             return Singleton.instance;
         }
-        // If no instance exists, create one and store it in a static property of the class.
+        // If no instance exists, create one and store it in a static property of the class
         Singleton.instance = this;
         this.data = data;
     }
 
-    // Method to get the data of the instance.
+    // Method to get the data of the instance
     getData() {
         return this.data;
     }
