@@ -1,3 +1,6 @@
+// The Factory pattern provides an interface for creating objects in a superclass, but allows subclasses to  
+//edit the type of objects that will be created.
+
 // Abstract class PhoneFactory defines the method createPhone(), which should return an object of the Phone class
 class PhoneFactory {
     createPhone(model) {
